@@ -100,20 +100,20 @@ def question2():
     tree = u.BinaryTree("x<=0.7")
 
     # Insert the left side of the tree
-    y_06_left = tree.insert_left("y<=0.6")
-    B = y_06_left.insert_left("B")  # Terminal node B
-    x_02 = y_06_left.insert_right("x<=0.2")
-    a_left = x_02.insert_right("A")  # Terminal node A
-    y_08 = x_02.insert_left("y<=0.8")
-    c_left = y_08.insert_left("C")  # Terminal node C
-    b_right = y_08.insert_right("B")  # Terminal node B
+    A = tree.insert_left("y<=0.6")
+    A.insert_left("B")  # Terminal node B
+    C = A.insert_right("x<=0.2")
+    C.insert_right("A")  # Terminal node A
+    D = C.insert_left("y<=0.8")
+    D.insert_left("C")  # Terminal node C
+    D.insert_right("B")  # Terminal node B
 
     # Insert the right side of the tree
-    y_03_right = tree.insert_right("y<=0.3")
-    a_right = y_03_right.insert_left("A")  # Terminal node A
-    y_06_right = y_03_right.insert_right("y<=0.6")
-    c_right = y_06_right.insert_left("C")  # Terminal node C
-    a_far_right = y_06_right.insert_right("A")  # Terminal node A
+    B= tree.insert_right("y<=0.3")
+    B.insert_left("A")  # Terminal node A
+    E= B.insert_right("y<=0.6")
+    E.insert_left("C")  # Terminal node C
+    E.insert_right("A")  # Terminal node A
     #tree = u.BinaryTree("Root")
     answer["(d) full decision tree"] = tree
 
@@ -253,9 +253,9 @@ def question6():
     #import utils as u
     tree = u.BinaryTree("x<=0.5")
     tree.insert_right("A")
-    b = tree.insert_left("y<=0.4")
-    b.insert_left("A")
-    b.insert_right("B")
+    A = tree.insert_left("y<=0.4")
+    A.insert_left("A")
+    A.insert_right("B")
     answer["c, tree"] = tree
 
     return answer
